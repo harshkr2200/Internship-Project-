@@ -1,0 +1,537 @@
+@import "__moremixing.scss";
+@import "__mixing.scss";
+@import "__Var.scss";
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,700;0,800;1,400;1,500&display=swap");
+
+* {
+  margin: 0px;
+  padding: 0px;
+  box-sizing: border-box;
+  background-color: #fafafa;
+  font-family: "Poppins", sans-serif;
+}
+// ############################ Navbar ##################################
+.Navbar {
+  @include center(space-between);
+
+  .Navbar__logo__a {
+    @include menu(2rem, 700, 0.1rem);
+  }
+
+  .Navbar__item a {
+    @include menu(1.2rem, 400, 3rem);
+  }
+
+  .Navbar__item a:hover {
+    color: $mycolorred;
+    font-weight: 400;
+  }
+}
+//  ##################### Header ############################
+.header__section {
+  @include Right;
+
+  .container__section__h1 a {
+    @include contant;
+  }
+
+  .container__section__h1 p {
+    @include side;
+  }
+
+  .section__Lorem {
+    @include lorem;
+  }
+}
+
+.container__btn {
+  margin-top: 5em;
+  margin-left: 7em;
+  //   border: 2px solid black;
+}
+
+.container__section__btn {
+  @include btn;
+}
+
+.container__section__btn:hover {
+  @include btn__hover;
+}
+
+// ################################ icon ################################
+
+.icon__container {
+  margin: 3.5em 2em;
+
+  .fa {
+    @include icon;
+  }
+
+  .fa:hover {
+    opacity: 0.7;
+  }
+
+  .fa-linkedin {
+    @include icon;
+  }
+
+  .fa-instagram {
+    @include icon;
+  }
+}
+
+// ################################ Artticle ################################
+
+.article__container {
+  @include article__container;
+
+  .itemA {
+    @include itemA;
+  }
+
+  .itemB {
+    @include itemB;
+  }
+
+  .itemC {
+    grid-column: 5/7;
+    grid-row: 3/4;
+  }
+
+  .itemD {
+    grid-column: 7/9;
+    grid-row: 3/4;
+  }
+
+  .itemE {
+    grid-column: 7/9;
+    grid-row: 4/6;
+  }
+
+  .itemF {
+    grid-column: 5/7;
+    grid-row: 4/6;
+  }
+}
+
+// ########################### main #############################
+
+.main__container {
+  @include main;
+  box-shadow: 0 0 5px 2px rgba(0, 0, 0, 0.1);
+  transition: all 0.5s;
+  position: relative;
+
+  .main__container__left {
+    // border: 2px solid black;
+    width: 32%;
+
+    .main__container__img {
+      @include image;
+    }
+
+    .main__cintainer__contant {
+      @include imagetext;
+    }
+  }
+
+  .main__container__left:hover {
+    @include hover;
+  }
+
+  .main__container__middle {
+    // border: 2px solid yellowgreen;
+    width: 32%;
+
+    .main__container__middle__img {
+      @include image;
+      margin-top: 3em;
+    }
+
+    .main__cintainer__art {
+      @include imagetext;
+    }
+  }
+
+  .main__container__middle:hover {
+    @include hover;
+  }
+
+  .main__container__right {
+    // border: 2px solid pink;
+    width: 32%;
+
+    .main__container__right__img {
+      @include image;
+    }
+
+    .main__cintainer__brand {
+      @include imagetext;
+    }
+  }
+  .main__container__right:hover {
+    @include hover;
+  }
+}
+
+//  ##################### section--container #######################
+               
+.section__container {
+  @include container;
+  position: relative;
+
+  .container__item {
+    transform: scale(1);
+    display: block;
+    transition: all 0.5s;
+  }
+
+  .item1 {
+    grid-row: 1/6;
+    background-image: url(/img/pexels-anni-roenkae-2832382.jpg);
+    @include back;
+  }
+
+  .item2 {
+    grid-row: 1/3;
+    background-image: url(/img/pexels-melvin-buezo-2529148.jpg);
+    @include back;
+  }
+
+  .item3 {
+    grid-row: 1/3;
+    background-image: url(/img/pexels-sound-on-3756879.jpg);
+    @include back;
+  }
+  .item4 {
+    grid-row: 1/3;
+    background-image: url(/img/pexels-rahul-716398.jpg);
+    @include back;
+  }
+
+  .item5 {
+    grid-row: 3/6;
+    grid-column: 2/4;
+    background-image: url(/img/pexels-laptop-1779487.jpg);
+    @include back;
+  }
+
+  .item6 {
+    grid-row: 3/6;
+    background-image: url(/img/pexels-lukas-574073.jpg);
+    @include back;
+  }
+
+  .container__item p:hover {
+    transform: scale(1.02);
+    opacity: 1;
+  }
+
+  .container__item:hover {
+    transform: scale(1.02);
+  }
+
+  .container__item__text {
+    @include backtexthover;
+  }
+}
+
+.section__box {
+  @include box;
+
+  .section__box__left {
+    // border: 2px solid yellowgreen;
+    width: 50%;
+    // padding-left: 3rem;
+    margin-top: 3em;
+
+    .section__box__left__p {
+      @include letter;
+    }
+
+    .section__box__left__p2 {
+      @include box-lorem;
+    }
+
+    .section__box__left__h3 {
+      @include box-left;
+    }
+  }
+
+  .section__box__right {
+    // border: 2px solid pink;
+    width: 50%;
+
+    .box__hr {
+      @include box__hr;
+    }
+  }
+}
+
+// ############################ box__container ############################
+
+.box__container {
+  @include box__container;
+
+  .box__item {
+    transform: scale(1);
+    display: block;
+    transition: all 0.5s;
+  }
+
+  .box__item:hover {
+    transform: scale(1.02);
+  }
+
+  .item1 {
+    grid-row: 1/4;
+    background-image: url(/img/pexels-anni-roenkae-2832382.jpg);
+    @include back;
+  }
+
+  .item2 {
+    grid-row: 4/6;
+    background-image: url(/img/pexels-sound-on-3756879.jpg);
+    @include back;
+  }
+
+  .item3 {
+    grid-row: 1/6;
+    background-image: url(/img/pexels-rahul-716398.jpg);
+    @include back;
+  }
+
+  .item4 {
+    grid-row: 1/3;
+    background-image: url(/img/pexels-junior-teixeira-2047905.jpg);
+    @include back;
+  }
+
+  .item5 {
+    grid-row: 3/6;
+    background-image: url(/img/pexels-laptop-1779487.jpg);
+    @include back;
+  }
+}
+
+.contant__box {
+  @include contant-box;
+
+  .box__contant__item {
+    transform: scale(1);
+    display: block;
+    transition: all 0.5s;
+  }
+
+  .box__contant__item:hover {
+    transform: scale(1.02);
+  }
+
+  .item1 {
+    grid-column: 1/-1;
+    height: 1.5vh;
+  }
+
+  .item1 p {
+    font-size: 1rem;
+    font-weight: 500;
+    letter-spacing: 0.4em;
+  }
+
+  .item1 h2 {
+    font-size: 4rem;
+    line-height: 1em;
+    font-weight: 800;
+    letter-spacing: 0.2em;
+  }
+
+  .box__contant__item h4 {
+    color: $mycolorred;
+    font-size: 2rem;
+    font-weight: 300;
+  }
+
+  .box__contant__item h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+
+    .box__contant__item p {
+      font-size: 1rem;
+      font-weight: 500;
+      letter-spacing: 0.2em;
+    }
+  }
+}
+
+.box__grid {
+  // border: 2px solid yellow;
+  @include box__grid;
+
+  .box__grid__cintainer {
+    // border: 2px solid red;
+    transform: scale(1);
+    display: block;
+    transition: all 0.5s;
+  }
+
+  .box__grid__cintainer:hover {
+    transform: scale(1.02);
+  }
+
+  .item1 {
+    grid-row: 1/6;
+    background-image: url(/img/pexels-anjana-c-674010.jpg);
+    @include back;
+  }
+
+  .item2 {
+    grid-row: 1/4;
+    background-image: url(/img/pexels-chait-goli-1918290.jpg);
+    @include back;
+  }
+  .item3 {
+    grid-column: 2/3;
+    background-image: url(/img/pexels-james-wheeler-417074.jpg);
+    @include back;
+  }
+
+  .item4 {
+    background-image: url(/img/pexels-pixabay-277509.jpg);
+    @include back;
+  }
+}
+
+.text__contanier {
+  @include text__container;
+
+  h4 {
+    @include text__h4;
+  }
+
+  h1 a {
+    @include text__a;
+  }
+
+  .hoverback:hover {
+    text-decoration: underline;
+    color: $mycolorred;
+  }
+}
+
+.video__container {
+  @include video;
+
+  .video {
+    opacity: 0;
+    margin: 10em 22em;
+  }
+
+  .video:hover {
+    opacity: 1;
+  }
+}
+
+// ############################################ slider ##########################
+
+.slider-container {
+  @include slider__contanier;
+}
+
+.slider {
+  @include main__slider;
+}
+
+.slides {
+  @include small__side;
+}
+
+.slide:nth-of-type(even) {
+  background-color: rgb(250, 246, 212);
+}
+
+.slide {
+  @include slider;
+}
+
+.slide__text {
+  font-size: 40px;
+  font-weight: bold;
+  font-family: sans-serif;
+}
+
+.slide a {
+  background: none;
+  border: none;
+}
+
+a.slide__prev,
+.slider::before {
+  transform: rotate(135deg);
+  -webkit-transform: rotate(135deg);
+  left: 5%;
+}
+
+a.slide__next,
+.slider::after {
+  transform: rotate(-45deg);
+  -webkit-transform: rotate(-45deg);
+  right: 5%;
+}
+
+.slider::before,
+.slider::after,
+.slide__prev,
+.slide__next {
+  @include before;
+}
+
+.slider::before,
+.slider::after {
+  content: "";
+  z-index: 1;
+  background: none;
+  pointer-events: none;
+}
+
+.slider__nav {
+  @include slider__nav;
+}
+
+.slider__navlink {
+  @include navlink;
+}
+
+.read-article {
+  @include read__article;
+}
+.read-article:hover {
+  background: #d5d5d5;
+  box-shadow: rgb(50 50 93 / 25%) 0 0 100px -20px, rgb(0 0 0 / 30%) 0 0 60px 0px;
+}
+iframe[sandbox] .read-article {
+  display: none;
+}
+
+.slider-container p {
+  font-size: 1rem;
+}
+
+.footer__box {
+  height: 80vh;
+
+  h4 {
+    @include footer__box;
+  }
+}
+
+.card h4 {
+  text-align: center;
+  margin-top: 5em;
+}
+
+.count{
+  @include count;
+}
+.article__item h4 {
+  @include item4;
+}

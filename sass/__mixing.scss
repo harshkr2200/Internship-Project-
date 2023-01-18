@@ -1,0 +1,52 @@
+@mixin menu($fonts, $weight, $top) {
+  margin: 0.8em;
+  text-decoration: none;
+  font-size: $fonts;
+  color: black;
+  font-weight: $weight;
+  margin-top: $top;
+}
+
+@mixin contant {
+  text-align: left;
+  font-size: 9rem;
+  // border: 2px solid red;
+  text-decoration: none;
+  padding-left: 0.2em;
+  height: auto;
+  color: $mycolorred;
+  font-weight: 700;
+}
+
+@mixin side {
+  font-weight: 600;
+  font-size: 8rem;
+  padding-left: 0.3em;
+  // border: 2px solid orange;
+  letter-spacing: 0.2m;
+}
+
+@mixin icon {
+  padding: 20px;
+  font-size: 1.5rem;
+  width: 2em;
+  text-align: center;
+  text-decoration: none;
+}
+
+@mixin iconcolor {
+  background: gray;
+  color: white;
+}
+
+@mixin backtexthover {
+  font-size: 2rem;
+  width: 90%;
+  // height: 100%;
+  position: absolute;
+  bottom: 50%;
+  left: 30%;
+  color: $mycolorred;
+  display: block;
+  opacity: 0;
+}

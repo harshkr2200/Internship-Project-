@@ -1,0 +1,129 @@
+@mixin center($side) {
+  display: flex;
+  justify-content: $side;
+  background-color: $myColor;
+  border: 2px solid #fff;
+  max-width: 90vw;
+  margin: auto;
+}
+
+@mixin Right {
+  // border: 2px solid yellow;
+  max-width: 90vw;
+  margin: auto;
+  margin-top: 2em;
+}
+
+@mixin lorem {
+  font-size: 1.2rem;
+  font-weight: 400;
+  // border: 2px solid green;
+  padding-left: 6em;
+}
+
+@mixin btn {
+  text-decoration: none;
+  background-color: #fff;
+  border: 10px solid #fff;
+  border-radius: 4em;
+  padding: 2em;
+  color: black;
+  font-size: 1.3rem;
+  padding: 0.5em;
+  font-weight: 500;
+}
+
+@mixin image {
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin imagetext {
+  text-align: left;
+  padding: 0.3em 1em;
+  font-size: 1.5rem;
+  font-weight: 600;
+}
+
+@mixin hover {
+  // margin: 1em;
+  color: red;
+  // padding-left: 0.4em;
+  transform: scale(1.1);
+  z-index: 1;
+}
+
+@mixin back {
+  background-position: center;
+  background-size: cover;
+}
+
+@mixin letter {
+  font-size: 3rem;
+  letter-spacing: 0.3rem;
+  font-weight: 300;
+}
+
+@mixin box-left {
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1em;
+  letter-spacing: 0.3rem;
+}
+
+@mixin box-lorem {
+  font-size: 1rem;
+  font-weight: 300;
+  letter-spacing: 0.1em;
+  margin-top: 3em;
+}
+
+@mixin text__h4 {
+  font-weight: 300;
+  text-shadow: 0.2em;
+  font-size: 2rem;
+}
+
+@mixin text__a {
+  text-decoration: none;
+  font-weight: 800;
+  font-size: 4rem;
+  color: black;
+}
+
+@mixin itemA {
+  grid-column: 1/5;
+  grid-row: 1/6;
+  background-image: url(/img/pexels-alexander-grey-1428169.jpg);
+  @include back;
+  height: 100%;
+  width: 100%;
+}
+
+@mixin itemB {
+  grid-column: 5/9;
+  grid-row: 1/3;
+  font-size: 2rem;
+  line-height: 1.7em;
+  position: relative;
+}
+
+
+@mixin count {
+  width: 1.5em;
+  height: 2em;
+  text-align: center;
+  color: black;
+  font-weight:400;
+  font-size: 3.5rem;
+  float: left;
+
+}
+
+@mixin item4{
+  text-align: center;
+  margin-top: 7em;
+  margin-right: 4em;
+  font-size: 1.5rem;
+  font-weight: 200;
+}
